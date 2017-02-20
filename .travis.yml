@@ -1,5 +1,6 @@
 sudo: required
+dist: trusty
 before_install:
-- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-full
+- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-cjk
 script:
 - sh ./.build.sh
