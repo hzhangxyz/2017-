@@ -3,6 +3,6 @@ dist: trusty
 language: latex
 os: linux
 before_install:
-- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-cjk latex-cjk-all
+- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-base texlive-latex-extra texlive-latex-recommended texlive-math-extra texlive-lang-cjk latex-cjk-all
 script:
 - sh ./.build.sh
