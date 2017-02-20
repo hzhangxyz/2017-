@@ -3,6 +3,6 @@ dist: trusty
 language: latex
 os: linux
 before_install:
-- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-cjk texlive-fonts-recommended texlive-latex-extra latex-cjk-all
+- sudo apt-get -qq -y update && sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-cjk texlive-fonts-recommended texlive-latex-extra latex-cjk-all fonts-wqy-zenhei
 script:
 - sh ./.build.sh
