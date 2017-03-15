@@ -7,3 +7,11 @@ before_install:
     - sudo apt-get install -y --no-install-recommends texlive-base texlive-latex-extra texlive-latex-recommended texlive-math-extra texlive-lang-cjk latex-cjk-all
 script:
     - pdflatex -synctex=1 -interaction=nonstopmode ./Homework.tex
+after_success:
+    - git config --global user.email "travis@travis-ci.org"
+    - git config --global user.name "Travis CI"
+    - git add Homework.pdf
+    - git commit -m "Travis build: $TRAVIS_BUILD_NUMBER"
+    - git remote add origin git@github.com:hzhangxyz/2017-Li-Yi-Thermal-Physics-Homework.git
+    - git branch -u origin/master
+    - git push
